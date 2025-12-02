@@ -1,0 +1,58 @@
+names = ['Bob', 'Joe', 'Sally', 'Jesse']
+print(names[1])
+print(names[0])
+print(names[-1])
+print(names[2])
+
+print(f'Hello {names[0]}, how are you today?')
+
+motorcycles = ['honda', 'yamaha', 'ducati']
+print(motorcycles)
+
+motorcycles[-1] = 'suzuki'
+print(motorcycles)
+
+#append method
+motorcycles.append('ducati')
+print(motorcycles)
+
+#indert method
+motorcycles.insert(0, 'harley')
+print(motorcycles)
+
+#del statement
+del motorcycles[0]
+print(motorcycles)
+
+#pop method
+popped_motorcycles = motorcycles.pop()
+print(popped_motorcycles)
+print(motorcycles)
+
+print(f'The last motorcycle I owned was a {popped_motorcycles.title()}!')
+
+#remove item by value. removes first occurance. 
+motorcycles.remove('honda')
+print(motorcycles)
+
+#sort method changes the list permanently.
+motorcycles.sort()
+print(motorcycles)
+
+motorcycles.sort(reverse=True)
+print(motorcycles)
+
+#sorted method. does not change the original list.
+sorted_list = sorted(motorcycles)
+print(sorted_list)
+#print('\n')
+print(motorcycles)
+
+
+car_list = ['ford', 'honda', 'volvo']
+#reverse method
+car_list.reverse()
+print(car_list)
+
+#length of a list
+print(len(car_list))

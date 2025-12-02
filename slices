@@ -1,0 +1,10 @@
+#slice practice
+#first three items
+foods = ['pizza', 'falafel', 'carrot cake', 'cannoli', 'ice cream']
+print(foods[:3])
+
+#three middle items
+print(foods[1:4])
+
+#last three items
+print(foods[-3:])

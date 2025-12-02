@@ -1,0 +1,17 @@
+#counting to twenty
+twenty_count = [print(value) for value in range(1, 21)]
+twenty_count
+
+print('\n')
+
+
+#print odd numbers
+odd_nums = [print(value) for value in range(1, 21, 2)]
+odd_nums     
+
+#mult_of_three
+nums_by_three = list(range(3, 31, 3))
+for num in nums_by_three:
+    print(num)
+
+cubes = [print(value**3) for value in range(1, 11)]
