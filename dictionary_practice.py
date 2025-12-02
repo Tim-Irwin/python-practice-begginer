@@ -43,6 +43,7 @@ print(alien_1_points)
 
 print('\n')
 
+#format with better readibility
 person = {
     'first_name': 'Joe',
     'last_name': 'Smith',
@@ -53,3 +54,47 @@ print(person.get('first_name', 'Jane'))
 print(person.get('last_name', 'Doe'))
 print(f'{person.get('first_name')} {person.get('last_name')} has an age of {person.get('age')} and lives in {person.get('city')}!')
 
+
+print('\n')
+#Use a for loop to traverse a dictionary
+user_0 = {
+    'username': 'tirwin',
+    'first_name': 'Tim',
+    'last_name': 'Irwin'
+}
+
+for key, value in user_0.items():
+    print(f'\nKey: {key}')
+    print(f'Value: {value}')
+
+print('\n')
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'rust',
+    'phil': 'python',
+    }
+
+for name, lang in favorite_languages.items():
+    print(f'{name.title()}\'s fovorite language is {lang.title()}!')
+
+
+print('\n')
+#Looping through keys
+for name in favorite_languages.keys():
+    print(name.title())
+
+
+print('\n')
+#Looping through values
+for lang in favorite_languages.values():
+    print(lang.title())
+
+#Using set()
+for lang in favorite_languages.values():
+    print(lang.title())
+
+print('\n')
+#Sets are built using {}
+langs = {'Python', 'Java', 'Javascript'}
+print(langs)
