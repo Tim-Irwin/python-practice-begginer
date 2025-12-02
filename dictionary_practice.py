@@ -98,3 +98,53 @@ print('\n')
 #Sets are built using {}
 langs = {'Python', 'Java', 'Javascript'}
 print(langs)
+
+print('\n')
+#Nesting
+#empty list of aliens
+aliens = []
+
+#create 10 aliens
+for alien_num in range(10):
+    new_alien = {'color': 'Blue', 'score': 5, 'speed': 'slow'}
+    aliens.append(new_alien)
+
+for alien in aliens:
+    print(alien)
+print(len(aliens))
+
+print('\n')
+#lists in dictionaries
+favorite_languages = {
+    'jen': ['python', 'rust'],
+    'sarah': ['c'],
+    'edward': ['rust', 'go'],
+    'phil': ['python', 'haskell'],
+    }
+for key, value in favorite_languages.items():
+    print(f"{key.title()}'s favorite languages are:")
+    for val in value:
+        print(val.title())
+    print('\n')
+
+print('\n')
+#dict inside dict
+users = {
+    'aeinstein': {
+        'first': 'albert',
+        'last': 'einstein',
+        'location': 'princeton',
+        },
+
+    'mcurie': {
+        'first': 'marie',
+        'last': 'curie',
+        'location': 'paris',
+        },
+    }
+
+for username, user_info in users.items():
+    print(f'Username: {username}')
+    print(f'Full Name: {user_info['first'].title()} {user_info['last'].title()}')
+    print(f'Location: {user_info['location'].title()}')
+    print('\n')
