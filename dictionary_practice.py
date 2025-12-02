@@ -33,3 +33,23 @@ print(f'The new position of alien 2 is {alien_2["x-pos"]}!')
 #removing key/vlaue pairs
 del alien_0['points']
 print(alien_0)
+
+
+alien_0_points = alien_0.get('points', 'No points currently assigned.')
+print(alien_0_points)
+
+alien_1_points = alien_1.get('points', 'No points currently assigned.')
+print(alien_1_points)
+
+print('\n')
+
+person = {
+    'first_name': 'Joe',
+    'last_name': 'Smith',
+    'age': 31,
+    'city': 'Chicago'
+}
+print(person.get('first_name', 'Jane'))
+print(person.get('last_name', 'Doe'))
+print(f'{person.get('first_name')} {person.get('last_name')} has an age of {person.get('age')} and lives in {person.get('city')}!')
+
