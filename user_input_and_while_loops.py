@@ -77,10 +77,12 @@ while active:
     #Store response in dict
     responses[name] = car
 
+    #ask for another user. If no then terminate loop.
     repeat = input('\nWould another user like to respond? (Y/N)')
     if repeat == 'N':
         active = False
-    
+
+    #loop through key, value in dict to print messages.
     for key, value in responses.items():
         print(f"{key}'s favorite car brand is {value}.")
     
