@@ -73,6 +73,23 @@ my_new_car.read_odometer()
 my_new_car.update_odometer(560)
 my_new_car.read_odometer()
 
+#use composition to break a larger class into smaller classes.
+class Battery:
+    '''model the battery'''
+    '''Set battery size to 40 if not provided otherwise.'''
+    def __init__(self, battery_size = 40):
+        self.battery_size = battery_size
+
+    def battery_description(self):
+        print(f"This car has a {self.battery_size}-kWh battery.")
+
+    def get_range(self):
+        if self.battery_size == 40:
+            range = 150
+        elif self.battery_size == 65:
+            range = 225
+        print(f"This car will travel {range} miles before it needs to be charged.")
+
 #A child class
 class ElectricCar(Car):
     '''Has all aspects of the parent class Car.'''
@@ -80,17 +97,21 @@ class ElectricCar(Car):
     def __init__(self, make, model, year):
         '''Initialize attributes'''
         super().__init__(make, model, year)
-        self.battery = 40
-    
-    def battery_size(self):
-        print(f"The battery size is {self.battery}-kWh.")
+        '''get battery description from Battery class'''
+        self.battery = Battery()
 
     def get_descriptive_name(self):
         '''Overide a superclass method'''
         description = f"A {self.make} {self.model} from {self.year}."
         return description
 
+
 my_electric_car = ElectricCar('Chevy', 'Bolt', 2018)
 print(my_electric_car.get_descriptive_name())
-my_electric_car.battery_size()
+my_electric_car.battery.battery_description()
+my_electric_car.battery.get_range()
 
+
+
+
+    
