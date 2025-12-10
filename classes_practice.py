@@ -111,6 +111,21 @@ print(my_electric_car.get_descriptive_name())
 my_electric_car.battery.battery_description()
 my_electric_car.battery.get_range()
 
+#how to import classes for use in other modules.
+#use the format 'from car import Car'
+#car is form the filename car.py and Car is the name of the class imported for use.
+#To import multiple classes from one module use a comma separator. 'from car import Car, ElectricCar'
+
+#To import an entire module simply use 'import car'
+
+#Importing all classes from a module use 'import mudule_name *'. Not recommended because it can be unclear what classes you are using and leads to confusion with names in a file.
+
+#you can use aliases using this format 'from module_name import class_name as alias.
+
+
+
+
+
 
 
 
