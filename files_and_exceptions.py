@@ -24,3 +24,19 @@ for line in split_lines:
 print(pi_string)
 print(len(pi_string))
 
+#write to a file. Keep in mind write_text will delete current contents if the file already exists.
+ff_path = Path('fun_facts.txt')
+new_content = 'I love Python!\n'
+new_content += "I love creating with Python! \n"
+new_content += "I will succeed at being a Pythonista!"
+ff_path.write_text(new_content)
+#read and print the data.
+ff_read = ff_path.read_text()
+print(ff_read)
+print('\n')
+
+#exception handling
+try:
+    print(5/0)
+except ZeroDivisionError:
+    print("You can't divide by zero.")
